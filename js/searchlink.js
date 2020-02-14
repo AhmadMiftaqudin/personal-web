@@ -1,5 +1,6 @@
+
 function search_link() {
-    let input=document.getDocumentById('searchbar').value
+    let input=document.getElementById('searchbar').value
     input=input.toLowerCase();
     let x=document.getElementsByClassName('linkname');
 
@@ -8,7 +9,7 @@ function search_link() {
             x[i].style.display="none";
         }
         else {
-            x[i].style.display="list-item"
+            x[i].style.display="list-item";
         }
     }
 }
