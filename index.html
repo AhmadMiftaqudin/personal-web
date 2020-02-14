@@ -3,16 +3,37 @@
     <head>
         <meta charset="utf-8">
         <title>Ahmad Miftaqudin</title>
+
+        <!-- link to stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
     </head>
     <body>
-        <center
+        <center>
             <p>WELCOME</p>
             <p><a href="about.html">Link About Me</a></p>
-            <form>
-                <input class="search" type="text" placeholder="ketik nama file ...">
-                <input class="button" type="button" value="Klik">
-            </form>
-        </center><br>
-        <li><a style="text-decoration:none" href="two_operation.html">two_operation.html</a></li>
+            <input id="searchbar" name="search_bar" type="text" onkeyup="search_link()" placeholder="ketik nama file ...">
+        </center>
+
+        <!--ordered list-->
+        <ol id='list'>
+            <li class="linkname"><a style="text-decoration:none" href="two_operation.html">two_operation.html</a></li>
+        </ol>
+        <!--<script src="js/searchlink.js"></script>-->
+        <script>
+            function search_link() {
+                let input=document.getElementById('searchbar').value
+                input=input.toLowerCase();
+                let x=document.getElementsByClassName('linkname');
+
+                for(i=0;i<x.length;i++){
+                    if(!x[i].innerHTML.toLowerCase().includes(input)) {
+                        x[i].style.display="none";
+                    }
+                    else {
+                        x[i].style.display="list-item";
+                    }
+                }
+            }
+        </script>
     </body>
 </html>

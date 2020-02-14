@@ -1,0 +1,17 @@
+form {
+    width:500px;
+    margin:5px auto;
+}
+.search {
+    padding:10px 20 px;
+    background:rgba(50,50,50,0.2);
+    border:7px solid #dbdbdb;
+}
+input[type=text] {
+    width: 30%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+.linkname {
+    display: list-item;
+}
