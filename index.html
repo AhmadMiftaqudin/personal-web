@@ -6,8 +6,21 @@
 
         <!-- link to stylesheet -->
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+        <script type="text/javascript">
+            function display_ct() {
+                var refresh=1000;
+                mytime=setTimeout('display_ct()',refresh);
+            }
+            function display_ct() {
+                var x= new Date();
+                document.getElementById('ct').innerHTML = x;
+                display_ct();
+            }
+        </script>
     </head>
-    <body>
+    <body onload=display_ct();>
+        <span id='ct'></span>
         <center>
             <p>WELCOME</p>
             <p><a href="about.html">Link About Me</a></p>
