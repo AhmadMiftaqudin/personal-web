@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Operasi Logaritma Natural</title>
+    </head>
+    <body>
+        <center
+            <p><a href="../index.html">Back to home</a></p>
+        </center>
+        <center>
+            Operasi Logaritma Natural<br>
+            ln
+            <input type="text" id="txt1" onkeyup="sum();" /> = 
+            <input type="text" id ="txt2" onkeyup="sum();"/>
+        </center>
+        <script>
+            function sum(){
+                var bil = document.getElementById('txt1').value;
+                var hasil = Math.log(bil);
+                if(!isNaN(hasil)){
+                    document.getElementById('txt2').value=hasil;
+                }
+            }
+        </script>
+    </body>
+</html>
