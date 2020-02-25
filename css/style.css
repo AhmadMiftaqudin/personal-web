@@ -1,3 +1,9 @@
+html,body {
+    margin:0;
+    padding: 0;
+    height: 100%;
+}
+
 input[type=text] {
     position: absolute;
     margin: auto;
@@ -25,4 +31,21 @@ input[type=text] {
 
 .linkname {
     display: list-item;
+}
+
+#container {
+    position: relative;
+    min-height: 100%;
+
+}
+
+#footer {
+    width: 100%;
+    height: 120px;
+    padding-left:10px;
+    line-height: 50px;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom:0;
 }
