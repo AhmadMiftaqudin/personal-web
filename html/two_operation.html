@@ -5,22 +5,49 @@
         <title>Two Operation</title>
     </head>
     <body>
+        <div>
         <center
             <p><a href="../index.html">Back to home</a></p>
         </center>
         <center>
-            Penjumlahan Otomatis<br>
-            <input type= "text" id="txt1" onkeyup="sum();" /> + 
-            <input type="text" id="txt2" onkeyup="sum();" /> = 
-            <input type="text" id ="txt3" onkeyup="sum();"/>
+            Operasi Dua Bilangan<br>
+            <input type= "text" id="bil1" value="0" onkeyup="sum()"/>
+            <select id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id = "bil2" value="0" onkeyup="sum()"/>
+            <input type="submit" onclick="sum()" value="=">
+            <input type="text" id ="hasil" onkeyup="sum()"/>
+            <br><br>
+            note: bila operasi tidak berjalan dengan benar, klik di bagian "="
         </center>
+        </div>
         <script>
             function sum(){
-                var bil1 = document.getElementById('txt1').value;
-                var bil2 = document.getElementById('txt2').value;
-                var hasil = parseInt(bil1)+parseInt(bil2);
-                if(!isNaN(hasil)){
-                    document.getElementById('txt3').value=hasil;
+                var bil1 = parseInt(document.getElementById("bil1").value);
+                var bil2 = parseInt(document.getElementById("bil2").value);
+                var op = document.getElementById("op").value;
+                var hasil = document.getElementById("hasil");
+                var total;
+                if(isNaN(bil1)||isNaN(bil2)){
+                    alert('Isi form dengan angka!')
+                }else{
+                    if(op=="+"){
+                        total=bil1+bil2;
+                    }else if(op=="-"){
+                        total=bil1-bil2;
+                    }else if(op=="*"){
+                        total=bil1*bil2;
+                    }else if(op=="/"){
+                        total=bil1/bil2;
+                    }else{
+                        total=bil1%bil2;
+                    }
+                hasil.value=total;
                 }
             }
         </script>
