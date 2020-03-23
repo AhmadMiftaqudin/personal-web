@@ -3,4 +3,4 @@ My Personal Website
 # Info
 - This website is static website, not a dynamic website
 - Please using the newest chrome for the optimal page
-- Work on Safari, Chrome, Firefox(need improvment)
+- Work on Safari, Chrome, Firefox(need improvement)
